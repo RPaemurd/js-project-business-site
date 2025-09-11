@@ -1,10 +1,12 @@
-// Hämta de HTML-element vi behöver
-const hamburgerIcon = document.querySelector(".ham-menu");
-const navigationMenu = document.querySelector(".nav-menu");
+// Find the hamburger icon
+const hamMenu = document.querySelector(".ham-menu");
+// Find the menu panel
+const navMenu = document.querySelector(".nav-menu");
 
-// Lägg till en event-lyssnare som reagerar på klick
-hamburgerIcon.addEventListener("click", () => {
-    // När man klickar, lägg till/ta bort 'active'-klassen på båda elementen
-    hamburgerIcon.classList.toggle("active");
-    navigationMenu.classList.toggle("active");
+// When the hamburger icon is clicked
+hamMenu.addEventListener("click", () => {
+    // ...adds a class called "active" to the icon to change it to an "X".
+    hamMenu.classList.toggle("active");
+    // ...and add the "active" class to the menu to make it slide out.
+    navMenu.classList.toggle("active");
 });
